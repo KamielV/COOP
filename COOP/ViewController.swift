@@ -102,9 +102,28 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
-                let json = metadataObj.stringValue as?
-                messageLabel.text = metadataObj.stringValue
+                let data = metadataObj.stringValue.data(using: .utf8)
+                convertJSON(data: data!)
             }
+        }
+    }
+    
+    //JSON parsers
+    
+    func convertJSON(data: Data) {
+        do {
+            guard let json = try JSONSerialization.jsonObject(with:data, options: []) as? [String: AnyObject]
+                else {
+                    print("Json Error")
+                    return
+            }
+            let name = json["name"] as? String
+            messageLabel.text = name
+            
+        }
+        catch {
+            print("Big error")
+            return
         }
     }
 }
