@@ -117,8 +117,8 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
                     print("Json Error")
                     return
             }
-            let nam = json["name"] as? String
-            messageLabel.text = nam
+            let name = json["name"] as? String
+            messageLabel.text = name
             
         }
         catch {
