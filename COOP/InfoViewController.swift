@@ -40,22 +40,25 @@ class InfoViewController: UIViewController {
     }
     @IBAction func btnNLTouched(_ sender: Any) {
         if SetLanguage("Dutch_nl") {
-            let alert = UIAlertView(title: nil, message: Localization("languageChangedWarningMessage"), delegate: nil, cancelButtonTitle: "OK")
-            alert.show()
+            let alert = UIAlertController(title: Localization("languageChangedWarningMessage"), message: "", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in })
+            self.present(alert, animated: true)
         }
     }
     
 
     @IBAction func btnFRTouched(_ sender: Any) {
         if SetLanguage("French_fr") {
-            let alert = UIAlertView(title: nil, message: Localization("languageChangedWarningMessage"), delegate: nil, cancelButtonTitle: "OK")
-            alert.show()
+            let alert = UIAlertController(title: Localization("languageChangedWarningMessage"), message: "", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in })
+            self.present(alert, animated: true)
         }
     }
     @IBAction func btnENTouched(_ sender: Any) {
         if SetLanguage("English_en") {
-            let alert = UIAlertView(title: nil, message: Localization("languageChangedWarningMessage"), delegate: nil, cancelButtonTitle: "OK")
-            alert.show()
+            let alert = UIAlertController(title: Localization("languageChangedWarningMessage"), message: "", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in })
+            self.present(alert, animated: true)
         }
     }
     /*
