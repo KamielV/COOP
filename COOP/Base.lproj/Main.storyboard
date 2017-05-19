@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bV7-Jy-234">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,68 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Swift View Controller-->
+        <scene sceneID="ZND-Dt-Z3I">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" pageSpacing="4" navigationOrientation="horizontal" spineLocation="none" id="bV7-Jy-234" customClass="SwiftViewController" customModule="COOP" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iMC-2c-KXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="600" y="-696"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="btQ-pg-HYP">
+            <objects>
+                <viewController restorationIdentifier="page_1" storyboardIdentifier="page_1" id="ibd-mh-Agz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sF5-Sq-MzK"/>
+                        <viewControllerLayoutGuide type="bottom" id="41d-4T-mkr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YhN-HA-9Vz">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.59537252610000002" green="1" blue="0.71868676789999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c3K-ii-ali" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1266" y="-696"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="PWq-Ah-Hjh">
+            <objects>
+                <viewController restorationIdentifier="page_2" storyboardIdentifier="page_2" id="8YB-FM-K21" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vC0-qI-AzF"/>
+                        <viewControllerLayoutGuide type="bottom" id="XKZ-FV-PTo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="chR-T5-IBE">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.96189002787905742" blue="0.16181643651197175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fqI-UR-5qN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1927" y="-696"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="g7O-k5-wmk">
+            <objects>
+                <viewController restorationIdentifier="page_3" storyboardIdentifier="page_3" id="BUr-cE-ezQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CQp-2u-rqV"/>
+                        <viewControllerLayoutGuide type="bottom" id="vv5-Ej-LgX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KWM-ep-UtX">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.14488015004886623" blue="0.045248990385925669" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KHo-6E-uy9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2578" y="-696"/>
+        </scene>
         <!--Info View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -33,7 +95,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan something" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2m-ms-faM">
-                                <rect key="frame" x="176" y="143" width="416" height="70"/>
+                                <rect key="frame" x="176" y="117" width="416" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="416" id="3Cr-pm-9iS"/>
                                     <constraint firstAttribute="height" constant="70" id="bcX-Zj-pQv"/>
@@ -78,9 +140,9 @@
                             <constraint firstItem="w2m-ms-faM" firstAttribute="centerX" secondItem="ssC-7y-qAq" secondAttribute="centerX" id="W3Y-yQ-aNt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ayV-0x-vyk">
-                        <barButtonItem key="rightBarButtonItem" title="Item" width="9" id="UVG-4r-cgo"/>
-                    </navigationItem>
+                    <connections>
+                        <outlet property="lblScan" destination="w2m-ms-faM" id="WeY-qc-bvj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,7 +161,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geen QR code gedetecteerd" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iZW-qE-lBS">
-                                <rect key="frame" x="-1253" y="962" width="3274" height="62"/>
+                                <rect key="frame" x="-1253" y="918" width="3274" height="106"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="3274" id="ExA-kj-UxZ"/>
