@@ -190,6 +190,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Scan" id="NJ0-0F-j9D"/>
+                    <connections>
+                        <outlet property="messageLabel" destination="iZW-qE-lBS" id="QTF-Xe-25w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BNp-T3-vCJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
