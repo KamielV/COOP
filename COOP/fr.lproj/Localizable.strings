@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  COOP
+
+  Created by VIJVERMAN Kamiel (s) on 18/05/2017.
+  Copyright © 2017 VIJVERMAN Kamiel (s). All rights reserved.
+*/
+"ScanText" = "Scanner quelque chose";
+"languageChangedWarningMessage" = "Langue changée en français";
