@@ -198,6 +198,43 @@
             </objects>
             <point key="canvasLocation" x="1941" y="-2"/>
         </scene>
+        <!--Test View Controller-->
+        <scene sceneID="Rbw-K4-Fn3">
+            <objects>
+                <viewController id="aob-qP-vLa" customClass="TestViewController" customModule="COOP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QnW-c5-R7C"/>
+                        <viewControllerLayoutGuide type="bottom" id="XCJ-ek-aLG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kZ4-WJ-rbF">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQG-rp-qc1">
+                                <rect key="frame" x="263" y="452" width="242" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="242" id="gGF-sg-BMC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pQG-rp-qc1" firstAttribute="centerY" secondItem="kZ4-WJ-rbF" secondAttribute="centerY" id="5FX-Ab-ugM"/>
+                            <constraint firstItem="pQG-rp-qc1" firstAttribute="centerX" secondItem="kZ4-WJ-rbF" secondAttribute="centerX" id="LOr-ne-73L"/>
+                            <constraint firstItem="pQG-rp-qc1" firstAttribute="top" secondItem="QnW-c5-R7C" secondAttribute="bottom" constant="432" id="pja-k0-CjF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblNaam" destination="pQG-rp-qc1" id="6m4-5U-FOl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CdD-5w-9GE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1669.53125" y="33.984375"/>
+        </scene>
     </scenes>
     <resources>
         <image name="focus" width="150" height="150"/>
