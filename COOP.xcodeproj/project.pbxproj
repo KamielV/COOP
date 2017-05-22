@@ -19,6 +19,7 @@
 		192469B81ECF354100348611 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192469B71ECF354100348611 /* TestViewController.swift */; };
 		192469BA1ED2D6E900348611 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192469B91ED2D6E900348611 /* QuizViewController.swift */; };
 		195E970E1ED2E81700EABA15 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195E970D1ED2E81700EABA15 /* ScoreViewController.swift */; };
+		195E97101ED2F4D400EABA15 /* FotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195E970F1ED2F4D400EABA15 /* FotoViewController.swift */; };
 		19E72CF31ECDB1C2006A40B9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19E72CF51ECDB1C2006A40B9 /* Localizable.strings */; };
 		19E72CFD1ECDB8B9006A40B9 /* Localisator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E72CFC1ECDB8B9006A40B9 /* Localisator.swift */; };
 		19E72D061ECF1181006A40B9 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E72D051ECF1181006A40B9 /* SwiftViewController.swift */; };
@@ -60,6 +61,7 @@
 		192469B71ECF354100348611 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		192469B91ED2D6E900348611 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		195E970D1ED2E81700EABA15 /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		195E970F1ED2F4D400EABA15 /* FotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FotoViewController.swift; sourceTree = "<group>"; };
 		19E72CF41ECDB1C2006A40B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		19E72CF61ECDB1D4006A40B9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		19E72CF71ECDB1D4006A40B9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				19212F891ECD848900EA78EF /* ViewController.swift */,
 				19212FB81ECD8F0D00EA78EF /* InfoViewController.swift */,
 				19212F8B1ECD848900EA78EF /* Main.storyboard */,
+				195E970F1ED2F4D400EABA15 /* FotoViewController.swift */,
 				195E970D1ED2E81700EABA15 /* ScoreViewController.swift */,
 				192469B91ED2D6E900348611 /* QuizViewController.swift */,
 				19212F911ECD848900EA78EF /* Assets.xcassets */,
@@ -302,6 +305,7 @@
 				192469BA1ED2D6E900348611 /* QuizViewController.swift in Sources */,
 				19212F8A1ECD848900EA78EF /* ViewController.swift in Sources */,
 				19212F901ECD848900EA78EF /* COOP.xcdatamodeld in Sources */,
+				195E97101ED2F4D400EABA15 /* FotoViewController.swift in Sources */,
 				19212FB91ECD8F0D00EA78EF /* InfoViewController.swift in Sources */,
 				19212F881ECD848900EA78EF /* AppDelegate.swift in Sources */,
 				195E970E1ED2E81700EABA15 /* ScoreViewController.swift in Sources */,

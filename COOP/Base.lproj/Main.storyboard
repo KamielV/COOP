@@ -415,6 +415,24 @@
             </objects>
             <point key="canvasLocation" x="2975.78125" y="34.5703125"/>
         </scene>
+        <!--Foto View Controller-->
+        <scene sceneID="4Dm-fe-Gn1">
+            <objects>
+                <viewController id="Ti1-1K-A9S" customClass="FotoViewController" customModule="COOP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="s51-Ii-Kfw"/>
+                        <viewControllerLayoutGuide type="bottom" id="0fA-hz-WZE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zej-oc-qfV">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="78V-6j-s1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3695" y="35"/>
+        </scene>
     </scenes>
     <resources>
         <image name="focus" width="150" height="150"/>
