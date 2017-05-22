@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Scan"; ObjectID = "U5V-dF-Uct"; */
+"U5V-dF-Uct.text" = "Scan";
+
+/* Class = "UILabel"; text = "Geen QR code gedetecteerd"; ObjectID = "iZW-qE-lBS"; */
+"iZW-qE-lBS.text" = "Geen QR code gedetecteerd";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ssC-7y-qAq"; */
+"ssC-7y-qAq.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Scan something"; ObjectID = "w2m-ms-faM"; */
+"w2m-ms-faM.text" = "Scan something";

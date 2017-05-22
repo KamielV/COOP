@@ -15,7 +15,6 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
     
-    @IBOutlet weak var topBar: UIView!
     @IBOutlet weak var messageLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +64,6 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             
             // Move the message label and top bar to the front
             view.bringSubview(toFront: messageLabel)
-            view.bringSubview(toFront: topBar)
             
             // Initialize QR Code Frame to highlight the QR code
             qrCodeFrameView = UIView()
@@ -119,11 +117,20 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             }
             let name = json["name"] as? String
             messageLabel.text = name
-            
+            performSegue(withIdentifier: name!, sender: self)
         }
         catch {
             print("Big error")
             return
+        }
+    }
+    
+    // segues
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "Kamiel")  {
+            let nextVC = segue.destination as? TestViewController
+            nextVC?.name = "Kamiel"
         }
     }
 }
