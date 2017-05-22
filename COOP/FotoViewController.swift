@@ -43,7 +43,7 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         imgFoto.contentMode = .scaleAspectFit
         imgFoto.image = chosenImage
-        let imgData = UIImagePNGRepresentation(chosenImage)
+        var imgData = UIImagePNGRepresentation(chosenImage)
         dismiss(animated: true, completion: nil)
     }
 
