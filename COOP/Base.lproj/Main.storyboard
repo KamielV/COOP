@@ -220,11 +220,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DLi-Vi-6T8">
+                                <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="Vft-zE-Nfa"/>
+                                    <tabBarItem systemItem="more" id="st4-Wf-Bav"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="pQG-rp-qc1" firstAttribute="centerY" secondItem="kZ4-WJ-rbF" secondAttribute="centerY" id="5FX-Ab-ugM"/>
+                            <constraint firstItem="DLi-Vi-6T8" firstAttribute="centerX" secondItem="pQG-rp-qc1" secondAttribute="centerX" id="5JN-j7-qwc"/>
+                            <constraint firstItem="DLi-Vi-6T8" firstAttribute="bottom" secondItem="XCJ-ek-aLG" secondAttribute="top" id="Kqr-HV-gF2"/>
                             <constraint firstItem="pQG-rp-qc1" firstAttribute="centerX" secondItem="kZ4-WJ-rbF" secondAttribute="centerX" id="LOr-ne-73L"/>
+                            <constraint firstItem="DLi-Vi-6T8" firstAttribute="leading" secondItem="kZ4-WJ-rbF" secondAttribute="leading" id="ZW8-iO-gXW"/>
                             <constraint firstItem="pQG-rp-qc1" firstAttribute="top" secondItem="QnW-c5-R7C" secondAttribute="bottom" constant="432" id="pja-k0-CjF"/>
                         </constraints>
                     </view>
