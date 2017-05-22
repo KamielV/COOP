@@ -34,10 +34,10 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan something" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2m-ms-faM">
-                                <rect key="frame" x="176" y="99" width="416" height="70"/>
+                                <rect key="frame" x="176" y="148" width="416" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="416" id="j5e-5Q-0xu"/>
-                                    <constraint firstAttribute="height" constant="70" id="ny6-A3-mYz"/>
+                                    <constraint firstAttribute="width" constant="416" id="CkS-QX-Z9f"/>
+                                    <constraint firstAttribute="height" constant="70" id="zts-bI-xRW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
@@ -48,8 +48,8 @@
                         <constraints>
                             <constraint firstItem="ssC-7y-qAq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JqR-ls-oUt"/>
                             <constraint firstItem="ssC-7y-qAq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="L00-27-PCk"/>
-                            <constraint firstItem="w2m-ms-faM" firstAttribute="centerX" secondItem="ssC-7y-qAq" secondAttribute="centerX" id="t1e-31-Vd3"/>
-                            <constraint firstItem="w2m-ms-faM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="79" id="zaC-Cn-mHx"/>
+                            <constraint firstItem="w2m-ms-faM" firstAttribute="centerX" secondItem="ssC-7y-qAq" secondAttribute="centerX" id="reE-Vr-ZpO"/>
+                            <constraint firstItem="w2m-ms-faM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="128" id="v2y-ME-b6d"/>
                         </constraints>
                     </view>
                 </viewController>
