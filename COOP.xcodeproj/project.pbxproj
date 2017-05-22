@@ -50,7 +50,6 @@
 		19212F8F1ECD848900EA78EF /* COOP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = COOP.xcdatamodel; sourceTree = "<group>"; };
 		19212F911ECD848900EA78EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19212F941ECD848900EA78EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		19212F961ECD848900EA78EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19212F9B1ECD848900EA78EF /* COOPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = COOPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19212F9F1ECD848900EA78EF /* COOPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COOPTests.swift; sourceTree = "<group>"; };
 		19212FA11ECD848900EA78EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +57,10 @@
 		19212FAA1ECD848900EA78EF /* COOPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COOPUITests.swift; sourceTree = "<group>"; };
 		19212FAC1ECD848900EA78EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19212FB81ECD8F0D00EA78EF /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		1923B8E11ED3076E00B91C4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Info.plist; sourceTree = "<group>"; };
+		1923B8E31ED3077000B91C4C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Info.plist; sourceTree = "<group>"; };
+		1923B8E41ED3077000B91C4C /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = fr; path = fr.lproj/Info.plist; sourceTree = "<group>"; };
+		1923B8E51ED3077100B91C4C /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = nl; path = nl.lproj/Info.plist; sourceTree = "<group>"; };
 		192469B71ECF354100348611 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		192469B91ED2D6E900348611 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		195E970D1ED2E81700EABA15 /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
@@ -132,7 +135,7 @@
 				192469B91ED2D6E900348611 /* QuizViewController.swift */,
 				19212F911ECD848900EA78EF /* Assets.xcassets */,
 				19212F931ECD848900EA78EF /* LaunchScreen.storyboard */,
-				19212F961ECD848900EA78EF /* Info.plist */,
+				1923B8E21ED3076E00B91C4C /* Info.plist */,
 				19E72CF51ECDB1C2006A40B9 /* Localizable.strings */,
 				19212F8E1ECD848900EA78EF /* COOP.xcdatamodeld */,
 				19E72D051ECF1181006A40B9 /* SwiftViewController.swift */,
@@ -362,6 +365,17 @@
 				19E72CFA1ECDB1DC006A40B9 /* nl */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1923B8E21ED3076E00B91C4C /* Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1923B8E11ED3076E00B91C4C /* Base */,
+				1923B8E31ED3077000B91C4C /* en */,
+				1923B8E41ED3077000B91C4C /* fr */,
+				1923B8E51ED3077100B91C4C /* nl */,
+			);
+			name = Info.plist;
 			sourceTree = "<group>";
 		};
 		19E72CF51ECDB1C2006A40B9 /* Localizable.strings */ = {
