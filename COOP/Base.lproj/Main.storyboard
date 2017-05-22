@@ -365,9 +365,6 @@
                                             <constraint firstAttribute="width" constant="209" id="gXe-Nx-E86"/>
                                         </constraints>
                                         <state key="normal" title="QUIZ"/>
-                                        <connections>
-                                            <segue destination="z1r-vu-UTI" kind="show" id="Kga-dx-pec"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cp8-NY-mib">
                                         <rect key="frame" x="280" y="0.0" width="209" height="64"/>
@@ -410,10 +407,10 @@
             </objects>
             <point key="canvasLocation" x="1393.75" y="34.5703125"/>
         </scene>
-        <!--Quiz View Controller-->
+        <!--View Controller-->
         <scene sceneID="LOk-NS-Yvd">
             <objects>
-                <viewController id="z1r-vu-UTI" customClass="QuizViewController" customModule="COOP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="z1r-vu-UTI" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cj0-SB-GGy"/>
                         <viewControllerLayoutGuide type="bottom" id="8PP-9c-UeE"/>
