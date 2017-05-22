@@ -52,7 +52,7 @@ class QuizViewController: UIViewController {
         
         if (currVraag != vragen.count)
         {
-            //nieuweVraag()
+            nieuweVraag()
         }
         else
         {
@@ -61,8 +61,8 @@ class QuizViewController: UIViewController {
     }
     
     //nieuwe vraag
-    //func <#name#>(<#parameters#>) -> <#return type#> {
-        //
-    //}
+    func nieuweVraag() {
+        
+    }
 
 }
