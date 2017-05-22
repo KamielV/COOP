@@ -36,7 +36,10 @@ class SwiftViewController: UIPageViewController, UIPageViewControllerDataSource,
             if view is UIScrollView {
                 view.frame = UIScreen.main.bounds
             } else if view is UIPageControl {
-                view.backgroundColor = UIColor.clear
+                let pageBol = view as? UIPageControl
+                pageBol?.backgroundColor = UIColor.clear
+                pageBol?.pageIndicatorTintColor = UIColor.red
+                
             }
         }
     }
