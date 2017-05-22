@@ -157,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1266" y="-2"/>
+            <point key="canvasLocation" x="-333" y="35"/>
         </scene>
         <!--Scan-->
         <scene sceneID="13v-NT-cz9">
@@ -191,12 +191,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Scan" id="NJ0-0F-j9D"/>
                     <connections>
-                        <outlet property="messageLabel" destination="iZW-qE-lBS" id="QTF-Xe-25w"/>
+                        <outlet property="messageLabel" destination="iZW-qE-lBS" id="wJM-17-rho"/>
+                        <segue destination="aob-qP-vLa" kind="show" identifier="Kamiel" id="e36-8f-6xn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BNp-T3-vCJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1941" y="-2"/>
+            <point key="canvasLocation" x="487" y="35"/>
         </scene>
         <!--Test View Controller-->
         <scene sceneID="Rbw-K4-Fn3">
@@ -233,7 +234,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CdD-5w-9GE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1669.53125" y="33.984375"/>
+            <point key="canvasLocation" x="1394" y="35"/>
         </scene>
     </scenes>
     <resources>

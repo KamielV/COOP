@@ -19,6 +19,7 @@
 		19E72CF31ECDB1C2006A40B9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19E72CF51ECDB1C2006A40B9 /* Localizable.strings */; };
 		19E72CFD1ECDB8B9006A40B9 /* Localisator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E72CFC1ECDB8B9006A40B9 /* Localisator.swift */; };
 		19E72D061ECF1181006A40B9 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E72D051ECF1181006A40B9 /* SwiftViewController.swift */; };
+		192469B81ECF354100348611 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192469B71ECF354100348611 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		19E72CFC1ECDB8B9006A40B9 /* Localisator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localisator.swift; sourceTree = "<group>"; };
 		19E72CFE1ECEF3D0006A40B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		19E72D051ECF1181006A40B9 /* SwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
+		192469B71ECF354100348611 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				19E72CF51ECDB1C2006A40B9 /* Localizable.strings */,
 				19212F8E1ECD848900EA78EF /* COOP.xcdatamodeld */,
 				19E72D051ECF1181006A40B9 /* SwiftViewController.swift */,
+				192469B71ECF354100348611 /* TestViewController.swift */,
 			);
 			path = COOP;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			files = (
 				19E72D061ECF1181006A40B9 /* SwiftViewController.swift in Sources */,
 				19E72CFD1ECDB8B9006A40B9 /* Localisator.swift in Sources */,
+				192469B81ECF354100348611 /* TestViewController.swift in Sources */,
 				19212F8A1ECD848900EA78EF /* ViewController.swift in Sources */,
 				19212F901ECD848900EA78EF /* COOP.xcdatamodeld in Sources */,
 				19212FB91ECD8F0D00EA78EF /* InfoViewController.swift in Sources */,
