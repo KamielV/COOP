@@ -399,12 +399,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35q-aH-Xse">
+                                <rect key="frame" x="309" y="909" width="150" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="QXy-yl-upZ"/>
+                                    <constraint firstAttribute="height" constant="52" id="bUh-zq-U1V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Foto trekken"/>
+                                <connections>
+                                    <segue destination="Ti1-1K-A9S" kind="show" id="pOL-sQ-pnO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="PpE-MF-5Bo" firstAttribute="top" secondItem="IEZ-1x-BcJ" secondAttribute="bottom" constant="440" id="3LH-pR-dYn"/>
+                            <constraint firstItem="nlY-mV-DA1" firstAttribute="top" secondItem="35q-aH-Xse" secondAttribute="bottom" constant="63" id="Kja-P5-zUr"/>
                             <constraint firstItem="PpE-MF-5Bo" firstAttribute="centerX" secondItem="0yO-jl-EoE" secondAttribute="centerX" id="NDq-Z1-llG"/>
                             <constraint firstItem="PpE-MF-5Bo" firstAttribute="centerY" secondItem="0yO-jl-EoE" secondAttribute="centerY" id="Tqd-eo-f2o"/>
+                            <constraint firstItem="35q-aH-Xse" firstAttribute="centerX" secondItem="PpE-MF-5Bo" secondAttribute="centerX" id="tNh-ip-hhI"/>
                         </constraints>
                     </view>
                     <connections>
@@ -426,12 +440,18 @@
                     <view key="view" contentMode="scaleToFill" id="zej-oc-qfV">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UqN-Ke-YkT">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="576"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="78V-6j-s1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3695" y="35"/>
+            <point key="canvasLocation" x="3694.53125" y="34.5703125"/>
         </scene>
     </scenes>
     <resources>
