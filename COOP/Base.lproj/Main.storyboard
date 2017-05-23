@@ -195,7 +195,7 @@
                     <navigationItem key="navigationItem" title="Scan" id="NJ0-0F-j9D"/>
                     <connections>
                         <outlet property="messageLabel" destination="iZW-qE-lBS" id="wJM-17-rho"/>
-                        <segue destination="aob-qP-vLa" kind="show" identifier="Kamiel" id="e36-8f-6xn"/>
+                        <segue destination="aob-qP-vLa" kind="show" identifier="toDetail" id="e36-8f-6xn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BNp-T3-vCJ" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -11,6 +11,7 @@ import AVFoundation
 
 class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
+    var id = 0
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
@@ -115,9 +116,8 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
                     print("Json Error")
                     return
             }
-            let name = json["name"] as? String
-            messageLabel.text = name
-            performSegue(withIdentifier: name!, sender: self)
+            id = (json["id"] as? Int)!
+            performSegue(withIdentifier: "toDetail", sender: self)
         }
         catch {
             print("Big error")
@@ -128,9 +128,9 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     // segues
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "Kamiel")  {
+        if(segue.identifier == "toDetail")  {
             let nextVC = segue.destination as? TestViewController
-            nextVC?.name = "Kamiel"
+            nextVC?.id = id
         }
     }
 }
