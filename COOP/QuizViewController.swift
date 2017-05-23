@@ -24,6 +24,7 @@ class QuizViewController: UIViewController {
     
     //viewDid functies
     override func viewDidAppear(_ animated: Bool) {
+        <#code#>
     }
     override func viewDidLoad() {
         super.viewDidLoad()
