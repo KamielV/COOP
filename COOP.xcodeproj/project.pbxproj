@@ -296,7 +296,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83806C831ED2E68B00F2D262 /* VirtueleGidsViewViewController.swift in Sources */,
 				19E72D061ECF1181006A40B9 /* SwiftViewController.swift in Sources */,
 				19E72CFD1ECDB8B9006A40B9 /* Localisator.swift in Sources */,
 				192469B81ECF354100348611 /* TestViewController.swift in Sources */,
@@ -478,7 +477,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YH5Q937JE3;
 				INFOPLIST_FILE = COOP/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = be.ehb.integrationMAW.groep6.COOP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -492,7 +491,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = YH5Q937JE3;
 				INFOPLIST_FILE = COOP/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = be.ehb.integrationMAW.groep6.COOP;
 				PRODUCT_NAME = "$(TARGET_NAME)";

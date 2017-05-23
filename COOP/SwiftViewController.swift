@@ -14,7 +14,8 @@ class SwiftViewController: UIPageViewController, UIPageViewControllerDataSource,
     lazy var VCArray: [UIViewController] = {
         return [self.VCInstance(name: "page_1"),
                 self.VCInstance(name: "page_2"),
-                self.VCInstance(name: "page_3")]
+                self.VCInstance(name: "page_3"),
+                self.VCInstance(name: "page_4")]
     }()
     
     private func VCInstance(name: String) -> UIViewController {
