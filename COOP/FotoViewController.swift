@@ -56,11 +56,11 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         let param = ["groepId":"a1a1"]
         
-        let imageData = UIImageJPEGRepresentation(imgFoto.image!, 1)
+        let imageData = UIImagePNGRepresentation(imgFoto.image!)
         
         if(imageData == nil )  { return }
         
-        let uploadScriptUrl = URL(string: "http://10.3.210.74/coop/api/upload.php")
+        let uploadScriptUrl = URL(string: "http://10.3.210.74:8080/coop/api/upload.php")
         
         let boundary = generateBoundaryString()
         
@@ -93,12 +93,21 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 print(error!)
                 return
             }
-            
-            if let dataString = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-            {
-                print(dataString)
+            print("\(String(describing: response))")
+            print("\(String(describing: data!))")
+            do {
+                let json = try JSONSerialization.jsonObject(with:data!, options: []) as? [String: AnyObject]
+//                    else {
+//                        print("Todo Error")
+//                        return
+//                }
+                print(json!)
+
             }
-            
+            catch {
+                print("json derulo")
+                return
+            }
         })
         
         
@@ -116,9 +125,9 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             }
         }
         
-        let filename = "groepsfoto.jpg"
+        let filename = "groepsfoto.png"
         
-        let mimetype = "image/jpg"
+        let mimetype = "image/png"
         
         body.appendString("--\(boundary)\r\n")
         body.appendString("Content-Disposition: form-data; name=\"\(filePathKey!)\"; filename=\"\(filename)\"\r\n")
