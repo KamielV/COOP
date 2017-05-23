@@ -52,11 +52,12 @@ class TestViewController: UIViewController {
                         print("Todo Error")
                         return
                 }
-                guard let jsonArray = (json[""]) else {
+                guard let naam = (json["naam"]) as? String else {
                     print ("array error")
                     return
                 }
                 DispatchQueue.main.async {
+                    self.lblNaam.text = naam
                     do {
                         try self.context.save()
                     }
