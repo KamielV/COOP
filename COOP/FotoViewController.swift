@@ -45,59 +45,42 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         imgFoto.image = chosenImage
         dismiss(animated: true, completion: nil)
     }
-    // verstuur data van http://www.kaleidosblog.com/how-to-upload-images-using-swift-2-send-multipart-post-request
+    
+    // verstuur data van https://stackoverflow.com/questions/44103973/swift-php-cant-upload-image
+    
     @IBAction func btnVerstuurData(_ sender: Any) {
-        let url = URL(string: "sitemerlinhier")
+        uploadFoto()
+        }
+    
+    func uploadFoto() {
         
-        let request = NSMutableURLRequest(url: url!)
-        request.httpMethod = "POST"
+        let param = ["groepId":"a1a1"]
+        
+        let imageData = UIImageJPEGRepresentation(imgFoto.image!, 1)
+        
+        if(imageData == nil )  { return }
+        
+        let uploadScriptUrl = URL(string: "http://10.3.210.74/coop/api/upload.php")
         
         let boundary = generateBoundaryString()
         
+        let request = NSMutableURLRequest(url: uploadScriptUrl!)
+        request.httpMethod = "POST"
+        
+        request.httpBody = createBodyWithParameters(param as [String : String], filePathKey: "file", imageDataKey: imageData!, boundary: boundary)
         
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
         
         if (imgFoto.image == nil)
         {
-            print("no foto found")
             return
         }
         
-        let image_data = UIImageJPEGRepresentation(imgFoto.image!, 1.0)
         
-        
-        if(image_data == nil)
+        if(imageData == nil)
         {
-            print("no data found")
             return
         }
-        
-        
-        let body = NSMutableData()
-        
-        let filename = "groepfoto.jpg"
-        let mimetype = "image/jpg"
-        
-        
-        body.append("--\(boundary)\r\n".data(using: String.Encoding.utf8)!)
-        body.append("Content-Disposition:form-data; name=\"foto\"\r\n\r\n".data(using: String.Encoding.utf8)!)
-        body.append("hi\r\n".data(using: String.Encoding.utf8)!)
-        
-        
-        
-        body.append("--\(boundary)\r\n".data(using: String.Encoding.utf8)!)
-        body.append("Content-Disposition:form-data; name=\"file\"; filename=\"\(filename)\"\r\n".data(using: String.Encoding.utf8)!)
-        body.append("Content-Type: \(mimetype)\r\n\r\n".data(using: String.Encoding.utf8)!)
-        body.append(image_data!)
-        body.append("\r\n".data(using: String.Encoding.utf8)!)
-        
-        
-        body.append("--\(boundary)--\r\n".data(using: String.Encoding.utf8)!)
-        
-        
-        request.httpBody = body as Data
-        
-        
         
         let session = URLSession.shared
         
@@ -107,7 +90,7 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             data, response, error) in
             
             guard ((data) != nil), let _:URLResponse = response, error == nil else {
-                print("error")
+                print(error!)
                 return
             }
             
@@ -116,10 +99,38 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 print(dataString)
             }
             
-        }) 
+        })
+        
         
         task.resume()
+    }
+    
+    func createBodyWithParameters(_ parameters: [String: String]?, filePathKey: String?, imageDataKey: Data, boundary: String) -> Data {
+        let body = NSMutableData();
         
+        if parameters != nil {
+            for (key, value) in parameters! {
+                body.appendString("--\(boundary)\r\n")
+                body.appendString("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n")
+                body.appendString("\(value)\r\n")
+            }
+        }
+        
+        let filename = "groepsfoto.jpg"
+        
+        let mimetype = "image/jpg"
+        
+        body.appendString("--\(boundary)\r\n")
+        body.appendString("Content-Disposition: form-data; name=\"\(filePathKey!)\"; filename=\"\(filename)\"\r\n")
+        body.appendString("Content-Type: \(mimetype)\r\n\r\n")
+        body.append(imageDataKey)
+        body.appendString("\r\n")
+        
+        
+        
+        body.appendString("--\(boundary)--\r\n")
+        
+        return body as Data
     }
     
     func generateBoundaryString() -> String
@@ -127,4 +138,12 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         return "Boundary-\(UUID().uuidString)"
     }
 
+}
+//add appendString function
+extension NSMutableData {
+    
+    func appendString(_ string: String) {
+        let data = string.data(using: String.Encoding.utf8, allowLossyConversion: false)
+        append(data!)
+    }
 }

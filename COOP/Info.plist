@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCameraUsageDescription</key>
+	<string>Ik heb toegang tot de camera nodig coor de QR code te scannen</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Save photo to gallery?</string>
 	<key>CFBundleDevelopmentRegion</key>
