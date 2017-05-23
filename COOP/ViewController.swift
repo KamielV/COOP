@@ -115,9 +115,8 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
                     print("Json Error")
                     return
             }
-            let name = json["name"] as? String
-            messageLabel.text = name
-            performSegue(withIdentifier: name!, sender: self)
+            let id = json["id"] as? String
+            performSegue(withIdentifier: "toGuide", sender: self)
         }
         catch {
             print("Big error")
@@ -128,7 +127,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     // segues
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "Kamiel")  {
+        if(segue.identifier == "toGuide")  {
             let nextVC = segue.destination as? TestViewController
             nextVC?.name = "Kamiel"
         }
