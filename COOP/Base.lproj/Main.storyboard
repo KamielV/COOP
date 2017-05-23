@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="IY0-2g-NgC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Ti1-1K-A9S">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -441,12 +441,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UqN-Ke-YkT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-1" translatesAutoresizingMaskIntoConstraints="NO" id="UqN-Ke-YkT">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="745"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CC9-vo-cdm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CC9-vo-cdm">
                                 <rect key="frame" x="308" y="824" width="152" height="98"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="152" id="4VQ-EM-GNX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Verstuur"/>
                                 <connections>
@@ -457,6 +459,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="UqN-Ke-YkT" firstAttribute="top" secondItem="zej-oc-qfV" secondAttribute="top" id="1xg-0O-6Wi"/>
+                            <constraint firstItem="CC9-vo-cdm" firstAttribute="top" secondItem="UqN-Ke-YkT" secondAttribute="bottom" constant="79" id="53B-O3-maL"/>
+                            <constraint firstItem="0fA-hz-WZE" firstAttribute="top" secondItem="CC9-vo-cdm" secondAttribute="bottom" constant="102" id="9sb-tk-Nvh"/>
+                            <constraint firstItem="CC9-vo-cdm" firstAttribute="centerX" secondItem="UqN-Ke-YkT" secondAttribute="centerX" id="YsD-wA-FID"/>
                             <constraint firstItem="0fA-hz-WZE" firstAttribute="top" secondItem="UqN-Ke-YkT" secondAttribute="bottom" constant="279" id="bko-1h-LOD"/>
                             <constraint firstItem="UqN-Ke-YkT" firstAttribute="leading" secondItem="zej-oc-qfV" secondAttribute="leading" id="jKZ-Q8-uMY"/>
                             <constraint firstAttribute="trailing" secondItem="UqN-Ke-YkT" secondAttribute="trailing" id="nIC-tW-tEL"/>
@@ -472,9 +477,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background-1" width="6400" height="8534"/>
         <image name="focus" width="150" height="150"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HFt-Ou-8aW"/>
+        <segue reference="cBj-sG-MXb"/>
     </inferredMetricsTieBreakers>
 </document>

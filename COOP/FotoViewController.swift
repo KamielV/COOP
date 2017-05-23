@@ -47,7 +47,7 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     // verstuur data van http://www.kaleidosblog.com/how-to-upload-images-using-swift-2-send-multipart-post-request
     @IBAction func btnVerstuurData(_ sender: Any) {
-        let url = URL(string: "sitemerlinhier")
+        let url = URL(string: "http://")
         
         let request = NSMutableURLRequest(url: url!)
         request.httpMethod = "POST"
