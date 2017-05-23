@@ -145,10 +145,10 @@
             </objects>
             <point key="canvasLocation" x="2577.34375" y="-696.09375"/>
         </scene>
-        <!--Virtuele Gids View View Controller-->
+        <!--View Controller-->
         <scene sceneID="oa2-99-cGC">
             <objects>
-                <viewController id="RMa-nX-Z6b" customClass="VirtueleGidsViewViewController" customModule="COOP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RMa-nX-Z6b" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ise-TJ-pzL"/>
                         <viewControllerLayoutGuide type="bottom" id="BSJ-yS-ujy"/>
@@ -157,7 +157,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-1" translatesAutoresizingMaskIntoConstraints="NO" id="BrS-9P-XJl">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bckgrnd" translatesAutoresizingMaskIntoConstraints="NO" id="BrS-9P-XJl">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Na8-At-25r">
@@ -259,25 +259,25 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="toyota" translatesAutoresizingMaskIntoConstraints="NO" id="C0S-qU-shd">
-                                <rect key="frame" x="502" y="141" width="490" height="486"/>
+                                <rect key="frame" x="502" y="28" width="490" height="720"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="490" id="Daf-B2-YCB"/>
+                                    <constraint firstAttribute="width" constant="490" id="yUL-ov-0Am"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="C0S-qU-shd" firstAttribute="top" secondItem="ise-TJ-pzL" secondAttribute="bottom" constant="121" id="5cq-nT-iWD"/>
+                            <constraint firstAttribute="bottom" secondItem="C0S-qU-shd" secondAttribute="bottom" constant="20" symbolic="YES" id="6NB-Yv-9Rc"/>
                             <constraint firstItem="Na8-At-25r" firstAttribute="leading" secondItem="S3t-Ti-Htk" secondAttribute="leading" id="9f9-0q-g9f"/>
-                            <constraint firstItem="C0S-qU-shd" firstAttribute="leading" secondItem="Na8-At-25r" secondAttribute="trailing" constant="39" id="HoV-5q-GUf"/>
                             <constraint firstItem="BrS-9P-XJl" firstAttribute="bottom" secondItem="BSJ-yS-ujy" secondAttribute="top" id="Kbd-vv-hmU"/>
                             <constraint firstItem="Na8-At-25r" firstAttribute="top" secondItem="S3t-Ti-Htk" secondAttribute="top" id="TFK-Hl-l7j"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="C0S-qU-shd" secondAttribute="trailing" constant="12" id="XGw-Sf-Rp0"/>
                             <constraint firstItem="Na8-At-25r" firstAttribute="bottom" secondItem="BSJ-yS-ujy" secondAttribute="top" id="XKI-ZV-5rD"/>
                             <constraint firstItem="BrS-9P-XJl" firstAttribute="top" secondItem="Na8-At-25r" secondAttribute="top" id="YcI-e1-9qc"/>
-                            <constraint firstItem="Na8-At-25r" firstAttribute="centerY" secondItem="C0S-qU-shd" secondAttribute="centerY" id="Ygc-21-j78"/>
+                            <constraint firstItem="C0S-qU-shd" firstAttribute="top" secondItem="ise-TJ-pzL" secondAttribute="bottom" constant="8" symbolic="YES" id="cq0-U1-LGZ"/>
                             <constraint firstAttribute="trailing" secondItem="BrS-9P-XJl" secondAttribute="trailing" id="gNr-0I-2WK"/>
+                            <constraint firstItem="C0S-qU-shd" firstAttribute="leading" secondItem="Na8-At-25r" secondAttribute="trailing" constant="39" id="mpj-tp-AO3"/>
                             <constraint firstItem="Na8-At-25r" firstAttribute="leading" secondItem="BrS-9P-XJl" secondAttribute="leading" id="nKW-ih-L5Y"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="C0S-qU-shd" secondAttribute="trailing" constant="12" id="vPD-jb-4x9"/>
                         </constraints>
                     </view>
                     <connections>
@@ -569,6 +569,7 @@
         <image name="backButton1Mp3" width="630" height="361"/>
         <image name="backButton2Mp3" width="631" height="363"/>
         <image name="background-1" width="6400" height="8534"/>
+        <image name="bckgrnd" width="8534" height="6400"/>
         <image name="focus" width="150" height="150"/>
         <image name="heyvaert" width="1012" height="642"/>
         <image name="ipad1" width="3000" height="4243"/>
