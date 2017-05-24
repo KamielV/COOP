@@ -60,7 +60,7 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         if(imageData == nil )  { return }
         
-        let uploadScriptUrl = URL(string: "http://10.3.210.74:8080/coop/api/upload.php")
+        let uploadScriptUrl = URL(string: "http://10.3.210.37:8080/coop/api/upload.php")
         
         let boundary = generateBoundaryString()
         
