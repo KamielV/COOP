@@ -101,10 +101,18 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
-                url = URL(string: metadataObj.stringValue)
-                performSegue(withIdentifier: "toDetail", sender: self)
+                self.url = URL(string: metadataObj.stringValue)
+                let alert = UIAlertController(title: "QR scanned", message: "chique", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in
+                    self.gaNaarThemaView()
+                })
+                
             }
         }
+    }
+    
+    func gaNaarThemaView()  {
+        performSegue(withIdentifier: "toDetail", sender: self)
     }
     
     // segues
