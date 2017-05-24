@@ -106,7 +106,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
                 alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in
                     self.gaNaarThemaView()
                 })
-                
+                self.present(alert, animated: true)
             }
         }
     }
