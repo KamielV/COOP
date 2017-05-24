@@ -666,9 +666,6 @@
                                         <rect key="frame" x="280" y="0.0" width="465" height="30"/>
                                         <color key="backgroundColor" red="0.59537252610000002" green="1" blue="0.71868676789999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="QR"/>
-                                        <connections>
-                                            <segue destination="FR2-Vw-Kcs" kind="show" id="cBj-sG-MXb"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -804,7 +801,4 @@
         <image name="ipad4" width="2133" height="1508"/>
         <image name="logo" width="2829" height="2904"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="cBj-sG-MXb"/>
-    </inferredMetricsTieBreakers>
 </document>
