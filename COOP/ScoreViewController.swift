@@ -10,14 +10,12 @@ import UIKit
 
 class ScoreViewController: UIViewController {
     
-    var score:Int!
     
     @IBOutlet weak var lblScoreTotaal: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        lblScoreTotaal.text = "Je hebt \(score!) punten"
     }
 
     override func didReceiveMemoryWarning() {

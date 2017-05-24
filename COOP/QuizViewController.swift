@@ -72,7 +72,7 @@ class QuizViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "showScore")  {
             let nextVC = segue.destination as? ScoreViewController
-            nextVC?.score = points
+            //nextVC?.score = points
         }
     }
     

@@ -16,18 +16,6 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker?.delegate = self
-        
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
-            imagePicker!.allowsEditing = false
-            imagePicker!.sourceType = UIImagePickerControllerSourceType.camera
-            imagePicker!.cameraCaptureMode = .photo
-            present(imagePicker!, animated: true, completion: nil)
-        } else {
-            let alert = UIAlertController(title: "Camera Not Found", message: "This device has no Camera", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "OK", style:.default, handler: nil)
-            alert.addAction(ok)
-            present(alert, animated: true, completion: nil)
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +33,19 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         imgFoto.image = chosenImage
         dismiss(animated: true, completion: nil)
     }
+    @IBAction func btnNeemfoto(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
+            imagePicker!.allowsEditing = false
+            imagePicker!.sourceType = UIImagePickerControllerSourceType.camera
+            imagePicker!.cameraCaptureMode = .photo
+            present(imagePicker!, animated: true, completion: nil)
+        } else {
+            let alert = UIAlertController(title: "Camera Not Found", message: "This device has no Camera", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "OK", style:.default, handler: nil)
+            alert.addAction(ok)
+            present(alert, animated: true, completion: nil)
+        }
+    }
     
     // verstuur data van https://stackoverflow.com/questions/44103973/swift-php-cant-upload-image
     
@@ -53,14 +54,15 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
     
     func uploadFoto() {
+        let uploadScriptUrl = URL(string: "http://10.3.210.37:8080/coop/api/upload.php")
+        
+        let session = URLSession.shared
         
         let param = ["groepId":"a1a1"]
         
         let imageData = UIImagePNGRepresentation(imgFoto.image!)
         
         if(imageData == nil )  { return }
-        
-        let uploadScriptUrl = URL(string: "http://10.3.210.37:8080/coop/api/upload.php")
         
         let boundary = generateBoundaryString()
         
@@ -73,16 +75,18 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         
         if (imgFoto.image == nil)
         {
+            print("image error")
             return
         }
         
         
         if(imageData == nil)
         {
+            print("image data error")
             return
         }
         
-        let session = URLSession.shared
+        
         
         
         let task = session.dataTask(with: request as URLRequest, completionHandler: {
@@ -93,19 +97,20 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 print(error!)
                 return
             }
-            print("\(String(describing: response))")
-            print("\(String(describing: data!))")
+            print("\(String(describing: response!))")
+            print("\(String(describing: data?.description))")
+            print(error)
             do {
-                let json = try JSONSerialization.jsonObject(with:data!, options: []) as? [String: AnyObject]
-//                    else {
-//                        print("Todo Error")
-//                        return
-//                }
-                print(json!)
+                guard let json = try JSONSerialization.jsonObject(with:data!, options: .allowFragments) as? [String: AnyObject]
+                    else {
+                        print("json Error")
+                        return
+                }
+                print(json)
 
             }
             catch {
-                print("json derulo")
+                print(error)
                 return
             }
         })
@@ -115,6 +120,14 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     func createBodyWithParameters(_ parameters: [String: String]?, filePathKey: String?, imageDataKey: Data, boundary: String) -> Data {
+        let date = Date()
+        let calendar = Calendar.current
+        let day = calendar.component(.day, from: date)
+        let month = calendar.component(.month, from: date)
+        let year = calendar.component(.year, from: date)
+        let hour = calendar.component(.hour, from: date)
+        let minutes = calendar.component(.minute, from: date)
+        let second = calendar.component(.second, from: date)
         let body = NSMutableData();
         
         if parameters != nil {
@@ -125,7 +138,7 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             }
         }
         
-        let filename = "groepsfoto.png"
+        let filename = "groepsfoto\(day)-\(month)-\(year)-\(hour)_\(minutes)_\(second).png"
         
         let mimetype = "image/png"
         

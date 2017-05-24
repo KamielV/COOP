@@ -450,9 +450,18 @@
                                     <action selector="btnVerstuurData:" destination="Ti1-1K-A9S" eventType="touchUpInside" id="5Ie-lc-RZ5"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="focus" translatesAutoresizingMaskIntoConstraints="NO" id="UqN-Ke-YkT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UqN-Ke-YkT">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="745"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYN-ef-hnD">
+                                <rect key="frame" x="308" y="930" width="151" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Foto nemen"/>
+                                <connections>
+                                    <action selector="btnNeemfoto:" destination="Ti1-1K-A9S" eventType="touchUpInside" id="Sfd-7n-qIA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
