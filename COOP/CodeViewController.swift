@@ -7,21 +7,31 @@
 //
 
 import UIKit
+import AVFoundation
 
 class CodeViewController: UIViewController {
     
+    var playing = false
+    var urlString: [URLString] = []
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var url: URL!
+    var testURL = URL(string: "http://10.3.210.37:8080/coop/api/heyvae02")
+    var player:AVAudioPlayer = AVAudioPlayer()
     
-    @IBOutlet weak var imgBijAfbeelding: UIImageView!
-    @IBOutlet weak var lblCodeAmount: UILabel!
-    @IBOutlet weak var imgCodeAfbeelding: UIImageView!
+    @IBOutlet weak var imgThemafoto: UIImageView!
     @IBOutlet weak var lblTitel: UILabel!
     @IBOutlet weak var lblSubtitel: UILabel!
-    @IBOutlet weak var lblText: UILabel!
-    
+    @IBOutlet weak var lblBeschrijving: UILabel!
+    @IBOutlet weak var imgAfbeelding: UIImageView!
+    @IBOutlet weak var btnPlayPause: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        do {
+            urlString = try context.fetch(URLString.fetchRequest())
+        } catch {
+            print("Fetching Failed")
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -32,10 +42,36 @@ class CodeViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        getData()
+        requestPage()
     }
-    
+    func getData() {
+        do {
+            urlString = try context.fetch(URLString.fetchRequest())
+        } catch {
+            print("Fetching Failed")
+        }
+    }
     func requestPage() {
-        let urlRequest = URLRequest(url: url!)
+        var urlRequest: URLRequest!
+        if (url != nil) {
+            let tempUrlString = URLString(context: self.context)
+            tempUrlString.url = url.absoluteString
+            self.context.insert(tempUrlString)
+            do {
+                try self.context.save()
+            }
+            catch {
+                print("error met core data")
+            }
+            urlRequest = URLRequest(url: url!)
+        }
+        else {
+            let tempUrlString = urlString[0]
+            self.url = URL(string: tempUrlString.url!)
+            urlRequest = URLRequest(url: url)
+        }
+        
         let session = URLSession(configuration:URLSessionConfiguration.default)
         let task = session.dataTask(with: urlRequest) { (data, response, error) in
             // check for errors
@@ -56,31 +92,42 @@ class CodeViewController: UIViewController {
                         return
                 }
                 guard let titel = (json["titel"]) as? String else {
-                    print ("array error")
+                    print ("titel error")
                     return
                 }
                 guard let subtitel = (json["subtitel"]) as? String else {
-                    print ("array error")
+                    print ("subtitel error")
                     return
                 }
                 guard let themafoto = (json["themafoto"]) as? String else {
-                    print ("array error")
+                    print ("themafoto error")
                     return
                 }
                 guard let beschrijving = (json["beschrijving"]) as? String else {
-                    print ("array error")
+                    print ("beschrijving error")
                     return
                 }
                 guard let audiofile = (json["audiofile"]) as? String else {
-                    print ("array error")
+                    print ("audiofile error")
                     return
                 }
                 guard let afbeelding = (json["afbeelding"]) as? String else {
-                    print ("array error")
+                    print ("afbeelding error")
                     return
                 }
                 DispatchQueue.main.async {
-                    
+                    self.lblTitel.text = titel
+                    self.lblSubtitel.text = subtitel
+                    self.imgThemafoto.image = UIImage(named: themafoto)
+                    self.lblBeschrijving.text = beschrijving
+                    self.imgAfbeelding.image = UIImage(named: afbeelding)
+                    do {
+                        let audioPath = Bundle.main.path(forResource: audiofile, ofType: "mp3")
+                        try self.player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath!))
+                    }
+                    catch {
+                        print("Audio load error")
+                    }
                 }
                 
                 
@@ -91,6 +138,21 @@ class CodeViewController: UIViewController {
             
         }
         task.resume()
+        
+    }
+    
+    @IBAction func btnPlayTouched(_ sender: Any) {
+        if(!playing)
+        {
+            player.play()
+            playing = true
+            btnPlayPause.setImage(#imageLiteral(resourceName: "pauseButton") , for: .normal)
+        }
+        else {
+            player.pause()
+            playing = false
+            btnPlayPause.setImage(#imageLiteral(resourceName: "playButton") , for: .normal)
+        }
         
     }
     

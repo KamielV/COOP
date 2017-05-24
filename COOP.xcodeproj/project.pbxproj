@@ -19,6 +19,7 @@
 		192469B81ECF354100348611 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192469B71ECF354100348611 /* TestViewController.swift */; };
 		192469BA1ED2D6E900348611 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192469B91ED2D6E900348611 /* QuizViewController.swift */; };
 		19A0C3AD1ED47A60000B55F1 /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A0C3AC1ED47A60000B55F1 /* CodeViewController.swift */; };
+		19A0C3B11ED583A2000B55F1 /* autotekoop.mp3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 19A0C3B01ED583A2000B55F1 /* autotekoop.mp3.mp3 */; };
 		19E72CF31ECDB1C2006A40B9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19E72CF51ECDB1C2006A40B9 /* Localizable.strings */; };
 		19E72CFD1ECDB8B9006A40B9 /* Localisator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E72CFC1ECDB8B9006A40B9 /* Localisator.swift */; };
 		19E72D061ECF1181006A40B9 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E72D051ECF1181006A40B9 /* SwiftViewController.swift */; };
@@ -60,6 +61,7 @@
 		192469B71ECF354100348611 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		192469B91ED2D6E900348611 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		19A0C3AC1ED47A60000B55F1 /* CodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
+		19A0C3B01ED583A2000B55F1 /* autotekoop.mp3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = autotekoop.mp3.mp3; sourceTree = "<group>"; };
 		19E72CF41ECDB1C2006A40B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		19E72CF61ECDB1D4006A40B9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
 		19E72CF71ECDB1D4006A40B9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				19212FB81ECD8F0D00EA78EF /* InfoViewController.swift */,
 				19212F8B1ECD848900EA78EF /* Main.storyboard */,
 				19A0C3AC1ED47A60000B55F1 /* CodeViewController.swift */,
+				19A0C3B01ED583A2000B55F1 /* autotekoop.mp3.mp3 */,
 				192469B91ED2D6E900348611 /* QuizViewController.swift */,
 				19212F911ECD848900EA78EF /* Assets.xcassets */,
 				19212F931ECD848900EA78EF /* LaunchScreen.storyboard */,
@@ -272,6 +275,7 @@
 				19E72CF31ECDB1C2006A40B9 /* Localizable.strings in Resources */,
 				19212F921ECD848900EA78EF /* Assets.xcassets in Resources */,
 				19212F8D1ECD848900EA78EF /* Main.storyboard in Resources */,
+				19A0C3B11ED583A2000B55F1 /* autotekoop.mp3.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
