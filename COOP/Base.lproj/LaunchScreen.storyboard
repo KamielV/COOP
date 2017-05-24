@@ -39,7 +39,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bckgrnd" width="8534" height="6400"/>
-        <image name="coop-logo-neg" width="5670" height="5821"/>
+        <image name="bckgrnd" width="4267" height="3200"/>
+        <image name="coop-logo-neg" width="2835" height="2910"/>
     </resources>
 </document>
