@@ -70,10 +70,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-1" translatesAutoresizingMaskIntoConstraints="NO" id="psn-aR-Cad">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="MHc-QF-d4X">
                                 <rect key="frame" x="264" y="28" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -87,6 +83,10 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ipad2" translatesAutoresizingMaskIntoConstraints="NO" id="9pi-Rb-dg8">
                                 <rect key="frame" x="163" y="281" width="442" height="460"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-1" translatesAutoresizingMaskIntoConstraints="NO" id="psn-aR-Cad">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -134,8 +134,8 @@
                                 <rect key="frame" x="218" y="326" width="333" height="436"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-1" translatesAutoresizingMaskIntoConstraints="NO" id="yr4-bc-IA5">
-                                <rect key="frame" x="-14" y="10" width="768" height="1024"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bckgrnd" translatesAutoresizingMaskIntoConstraints="NO" id="yr4-bc-IA5">
+                                <rect key="frame" x="98" y="-213" width="1038" height="750"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -143,12 +143,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KHo-6E-uy9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2577.34375" y="-696.09375"/>
+            <point key="canvasLocation" x="2576.953125" y="-696.09375"/>
         </scene>
-        <!--View Controller-->
+        <!--Code View Controller-->
         <scene sceneID="oa2-99-cGC">
             <objects>
-                <viewController id="RMa-nX-Z6b" sceneMemberID="viewController">
+                <viewController id="RMa-nX-Z6b" customClass="CodeViewController" customModule="COOP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ise-TJ-pzL"/>
                         <viewControllerLayoutGuide type="bottom" id="BSJ-yS-ujy"/>
@@ -281,6 +281,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imgBijAfbeelding" destination="C0S-qU-shd" id="1VU-Vi-iMI"/>
+                        <outlet property="imgCodeAfbeelding" destination="9W0-9N-0bJ" id="6QD-n3-q91"/>
+                        <outlet property="lblCodeAmount" destination="yeq-B5-t4a" id="tOA-8g-YzY"/>
+                        <outlet property="lblSubtitel" destination="bc7-ZU-vPH" id="P6s-VI-ZuQ"/>
+                        <outlet property="lblText" destination="lvQ-By-OKa" id="Kaz-vs-Ew2"/>
+                        <outlet property="lblTitel" destination="NM4-5D-BIj" id="jDH-kI-84s"/>
                         <outlet property="transparantView" destination="Na8-At-25r" id="0rw-Sp-Ykb"/>
                     </connections>
                 </viewController>

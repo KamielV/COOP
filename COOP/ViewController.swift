@@ -11,6 +11,7 @@ import AVFoundation
 
 class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
+    var url:URL!
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
@@ -100,37 +101,18 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
-                let data = metadataObj.stringValue.data(using: .utf8)
-                convertJSON(data: data!)
+                url = URL(string: metadataObj.stringValue)
+                performSegue(withIdentifier: "toDetail", sender: self)
             }
-        }
-    }
-    
-    //JSON parsers
-    
-    func convertJSON(data: Data) {
-        do {
-            guard let json = try JSONSerialization.jsonObject(with:data, options: []) as? [String: AnyObject]
-                else {
-                    print("Json Error")
-                    return
-            }
-            let name = json["name"] as? String
-            messageLabel.text = name
-            performSegue(withIdentifier: name!, sender: self)
-        }
-        catch {
-            print("Big error")
-            return
         }
     }
     
     // segues
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "Kamiel")  {
-            let nextVC = segue.destination as? TestViewController
-            nextVC?.name = "Kamiel"
+        if(segue.identifier == "toDetail")  {
+            let nextVC = segue.destination as? CodeViewController
+            nextVC?.url = self.url
         }
     }
 }
