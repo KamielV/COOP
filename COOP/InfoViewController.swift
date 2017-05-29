@@ -75,6 +75,27 @@ class InfoViewController: UIViewController {
 
     @IBAction func btnFRTouched(_ sender: Any) {
         if SetLanguage("French_fr") {
+            if(coreData[0].taal == nil) {
+                let tempCoreData = CoreData(context: self.context)
+                tempCoreData.taal = "fr"
+                self.context.insert(tempCoreData)
+                do {
+                    try self.context.save()
+                }
+                catch {
+                    print("error met core data")
+                }
+            }
+            else {
+                let tempTaal = "fr"
+                coreData[0].taal = tempTaal
+                do {
+                    try self.context.save()
+                }
+                catch {
+                    print("error met core data")
+                }
+            }
             let alert = UIAlertController(title: Localization("languageChangedWarningMessage"), message: "", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in })
             self.present(alert, animated: true)
@@ -82,6 +103,27 @@ class InfoViewController: UIViewController {
     }
     @IBAction func btnENTouched(_ sender: Any) {
         if SetLanguage("English_en") {
+            if(coreData[0].taal == nil) {
+                let tempCoreData = CoreData(context: self.context)
+                tempCoreData.taal = "en"
+                self.context.insert(tempCoreData)
+                do {
+                    try self.context.save()
+                }
+                catch {
+                    print("error met core data")
+                }
+            }
+            else {
+                let tempTaal = "en"
+                coreData[0].taal = tempTaal
+                do {
+                    try self.context.save()
+                }
+                catch {
+                    print("error met core data")
+                }
+            }
             let alert = UIAlertController(title: Localization("languageChangedWarningMessage"), message: "", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in })
             self.present(alert, animated: true)

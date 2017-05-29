@@ -15,6 +15,7 @@ class CodeViewController: UIViewController {
     var coreData: [CoreData] = []
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var url: URL!
+    var taal: String!
     var testURL = URL(string: "http://10.3.210.37:8080/coop/api/heyvae02/")
     var player:AVAudioPlayer = AVAudioPlayer()
     
@@ -29,6 +30,7 @@ class CodeViewController: UIViewController {
         super.viewDidLoad()
         do {
             coreData = try context.fetch(CoreData.fetchRequest())
+            taal = coreData[0].taal
         } catch {
             print("Fetching Failed")
         }
@@ -48,6 +50,7 @@ class CodeViewController: UIViewController {
     func getData() {
         do {
             coreData = try context.fetch(CoreData.fetchRequest())
+            taal = coreData[0].taal
         } catch {
             print("Fetching Failed")
         }
@@ -56,7 +59,8 @@ class CodeViewController: UIViewController {
         var urlRequest: URLRequest!
         if (url != nil) {
             let tempCoreData = CoreData(context: self.context)
-            tempCoreData.url = url.absoluteString
+            tempCoreData.url = "\(url.absoluteString)\\\(taal)"
+            self.url = URL(string: tempCoreData.url!)
             self.context.insert(tempCoreData)
             do {
                 try self.context.save()
@@ -68,7 +72,7 @@ class CodeViewController: UIViewController {
         }
         else {
             let tempCoreData = coreData[0]
-            self.url = URL(string: tempCoreData.url!)
+            self.url = URL(string: "\(tempCoreData.url!)\\\(taal)")
             urlRequest = URLRequest(url: url)
         }
         
