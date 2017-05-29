@@ -12,10 +12,10 @@ import AVFoundation
 class CodeViewController: UIViewController {
     
     var playing = false
-    var urlString: [URLString] = []
+    var urlString: [Dat] = []
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var url: URL!
-    var testURL = URL(string: "http://10.3.210.37:8080/coop/api/heyvae02")
+    var testURL = URL(string: "http://10.3.210.37:8080/coop/api/heyvae02/")
     var player:AVAudioPlayer = AVAudioPlayer()
     
     @IBOutlet weak var imgThemafoto: UIImageView!

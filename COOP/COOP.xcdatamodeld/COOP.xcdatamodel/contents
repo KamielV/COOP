@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="URLString" representedClassName=".URLString" syncable="YES" codeGenerationType="class">
+    <entity name="CoreData" representedClassName=".Data" syncable="YES" codeGenerationType="class">
+        <attribute name="taal" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="URLString" positionX="-63" positionY="-18" width="128" height="60"/>
+        <element name="CoreData" positionX="-63" positionY="-18" width="128" height="75"/>
     </elements>
 </model>
