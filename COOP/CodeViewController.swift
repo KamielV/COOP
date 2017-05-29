@@ -12,7 +12,7 @@ import AVFoundation
 class CodeViewController: UIViewController {
     
     var playing = false
-    var urlString: [Dat] = []
+    var coreData: [CoreData] = []
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var url: URL!
     var testURL = URL(string: "http://10.3.210.37:8080/coop/api/heyvae02/")
@@ -28,7 +28,7 @@ class CodeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         do {
-            urlString = try context.fetch(URLString.fetchRequest())
+            coreData = try context.fetch(CoreData.fetchRequest())
         } catch {
             print("Fetching Failed")
         }
@@ -47,7 +47,7 @@ class CodeViewController: UIViewController {
     }
     func getData() {
         do {
-            urlString = try context.fetch(URLString.fetchRequest())
+            coreData = try context.fetch(CoreData.fetchRequest())
         } catch {
             print("Fetching Failed")
         }
@@ -55,9 +55,9 @@ class CodeViewController: UIViewController {
     func requestPage() {
         var urlRequest: URLRequest!
         if (url != nil) {
-            let tempUrlString = URLString(context: self.context)
-            tempUrlString.url = url.absoluteString
-            self.context.insert(tempUrlString)
+            let tempCoreData = CoreData(context: self.context)
+            tempCoreData.url = url.absoluteString
+            self.context.insert(tempCoreData)
             do {
                 try self.context.save()
             }
@@ -67,8 +67,8 @@ class CodeViewController: UIViewController {
             urlRequest = URLRequest(url: url!)
         }
         else {
-            let tempUrlString = urlString[0]
-            self.url = URL(string: tempUrlString.url!)
+            let tempCoreData = coreData[0]
+            self.url = URL(string: tempCoreData.url!)
             urlRequest = URLRequest(url: url)
         }
         

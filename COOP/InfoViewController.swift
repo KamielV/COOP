@@ -10,13 +10,18 @@ import UIKit
 
 class InfoViewController: UIViewController {
     
+    var coreData: [CoreData] = []
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let arrayLanguages = Localisator.sharedInstance.getArrayAvailableLanguages()
 
     @IBOutlet weak var lblScan: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+        do {
+            coreData = try context.fetch(CoreData.fetchRequest())
+        } catch {
+            print("Fetching Failed")
+        }
         NotificationCenter.default.addObserver(self, selector: #selector(InfoViewController.receiveLanguageChangedNotification(notification:)), name: kNotificationLanguageChanged, object: nil)
         configureViewFromLocalisation()
     }
@@ -40,6 +45,27 @@ class InfoViewController: UIViewController {
     }
     @IBAction func btnNLTouched(_ sender: Any) {
         if SetLanguage("Dutch_nl") {
+            if(coreData[0].taal == nil) {
+                let tempCoreData = CoreData(context: self.context)
+                tempCoreData.taal = "nl"
+                self.context.insert(tempCoreData)
+                do {
+                    try self.context.save()
+                }
+                catch {
+                    print("error met core data")
+                }
+            }
+            else {
+                let tempTaal = "nl"
+                coreData[0].taal = tempTaal
+                do {
+                    try self.context.save()
+                }
+                catch {
+                    print("error met core data")
+                }
+            }
             let alert = UIAlertController(title: Localization("languageChangedWarningMessage"), message: "", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in })
             self.present(alert, animated: true)
