@@ -1,12 +1,126 @@
 
-/* Class = "UILabel"; text = "Scan"; ObjectID = "U5V-dF-Uct"; */
-"U5V-dF-Uct.text" = "Scan";
+/* Class = "UILabel"; text = "SubTitel"; ObjectID = "2J9-2d-T4H"; */
+"2J9-2d-T4H.text" = "SubTitel";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "32L-ME-eL3"; */
+"32L-ME-eL3.text" = "0";
+
+/* Class = "UILabel"; text = "Quest for knowledge!"; ObjectID = "5K8-Ak-bLL"; */
+"5K8-Ak-bLL.text" = "Quest for knowledge!";
+
+/* Class = "UIButton"; normalTitle = "QR"; ObjectID = "Cp8-NY-mib"; */
+"Cp8-NY-mib.normalTitle" = "QR";
+
+/* Class = "UIButton"; normalTitle = "DE"; ObjectID = "D1g-dO-cHW"; */
+"D1g-dO-cHW.normalTitle" = "DE";
+
+/* Class = "UIButton"; normalTitle = "QUIZ"; ObjectID = "DCu-Q0-PJ0"; */
+"DCu-Q0-PJ0.normalTitle" = "QUIZ";
+
+/* Class = "UILabel"; text = "titel"; ObjectID = "Dd5-94-2JS"; */
+"Dd5-94-2JS.text" = "titel";
+
+/* Class = "UILabel"; text = "PUNTEN"; ObjectID = "GCq-d1-V8n"; */
+"GCq-d1-V8n.text" = "PUNTEN";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "HSF-St-qIK"; */
+"HSF-St-qIK.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Hft-Js-MaB"; */
+"Hft-Js-MaB.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "En scoor hoog op de quiz!"; ObjectID = "HlJ-Xn-p3Y"; */
+"HlJ-Xn-p3Y.text" = "En scoor hoog op de quiz!";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Ju2-0J-niM"; */
+"Ju2-0J-niM.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Zoektocht naar kennis!"; ObjectID = "KUX-mp-9Gj"; */
+"KUX-mp-9Gj.text" = "Zoektocht naar kennis!";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "NHd-Mu-6RQ"; */
+"NHd-Mu-6RQ.text" = "Label";
+
+/* Class = "UINavigationItem"; title = "Scan"; ObjectID = "NJ0-0F-j9D"; */
+"NJ0-0F-j9D.title" = "Scan";
+
+/* Class = "UILabel"; text = "Quête du savoir!"; ObjectID = "Ntm-Iu-S0L"; */
+"Ntm-Iu-S0L.text" = "Quête du savoir!";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "OXm-zm-FNJ"; */
+"OXm-zm-FNJ.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "NL"; ObjectID = "PKd-yo-Y7s"; */
+"PKd-yo-Y7s.normalTitle" = "NL";
+
+/* Class = "UILabel"; text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"; ObjectID = "QR8-Jg-QSN"; */
+"QR8-Jg-QSN.text" = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Qtg-Eg-Jjl"; */
+"Qtg-Eg-Jjl.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "FR"; ObjectID = "Qwp-o8-ZZx"; */
+"Qwp-o8-ZZx.normalTitle" = "FR";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "SyU-Lt-Q64"; */
+"SyU-Lt-Q64.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "TPN-MG-09W"; */
+"TPN-MG-09W.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Ucg-mu-Il7"; */
+"Ucg-mu-Il7.text" = "Label";
+
+/* Class = "UILabel"; text = "En scoor hoog op de quiz!"; ObjectID = "Uyx-W4-cRo"; */
+"Uyx-W4-cRo.text" = "En scoor hoog op de quiz!";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "WLw-rr-E4h"; */
+"WLw-rr-E4h.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "EN"; ObjectID = "Xg5-Zf-gGy"; */
+"Xg5-Zf-gGy.normalTitle" = "EN";
+
+/* Class = "UILabel"; text = "Leer alles over de canalwijk"; ObjectID = "YSS-Hm-Vka"; */
+"YSS-Hm-Vka.text" = "Leer alles over de canalwijk";
+
+/* Class = "UILabel"; text = "Suche nach wissen!"; ObjectID = "cic-zk-MZm"; */
+"cic-zk-MZm.text" = "Suche nach wissen!";
+
+/* Class = "UIButton"; normalTitle = "EN"; ObjectID = "hTw-PB-mqs"; */
+"hTw-PB-mqs.normalTitle" = "EN";
+
+/* Class = "UILabel"; text = "Vind de 14 QR-codes en scan ze met de iPad!"; ObjectID = "hXJ-wt-7T0"; */
+"hXJ-wt-7T0.text" = "Vind de 14 QR-codes en scan ze met de iPad!";
 
 /* Class = "UILabel"; text = "Geen QR code gedetecteerd"; ObjectID = "iZW-qE-lBS"; */
 "iZW-qE-lBS.text" = "Geen QR code gedetecteerd";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "k5b-1x-aOB"; */
+"k5b-1x-aOB.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "1/14"; ObjectID = "oU5-hC-EMc"; */
+"oU5-hC-EMc.text" = "1/14";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "pQG-rp-qc1"; */
+"pQG-rp-qc1.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "NL"; ObjectID = "s6s-eK-FoC"; */
+"s6s-eK-FoC.normalTitle" = "NL";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "sa1-ju-UVn"; */
+"sa1-ju-UVn.normalTitle" = "Button";
 
 /* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ssC-7y-qAq"; */
 "ssC-7y-qAq.normalTitle" = "Button";
 
 /* Class = "UILabel"; text = "Scan something"; ObjectID = "w2m-ms-faM"; */
 "w2m-ms-faM.text" = "Scan something";
+
+/* Class = "UILabel"; text = "In welk jaar is het COOP gebouw open gegaan?"; ObjectID = "wcg-pe-Adp"; */
+"wcg-pe-Adp.text" = "In welk jaar is het COOP gebouw open gegaan?";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "xYk-0B-cVR"; */
+"xYk-0B-cVR.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "FR"; ObjectID = "zPB-yV-JNy"; */
+"zPB-yV-JNy.normalTitle" = "FR";
