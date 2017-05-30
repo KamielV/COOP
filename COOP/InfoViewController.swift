@@ -15,6 +15,7 @@ class InfoViewController: UIViewController {
     let arrayLanguages = Localisator.sharedInstance.getArrayAvailableLanguages()
 
     @IBOutlet weak var lblScan: UILabel!
+    @IBOutlet weak var btnStartScannen: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         do {
@@ -33,8 +34,8 @@ class InfoViewController: UIViewController {
     }
     
     func configureViewFromLocalisation() {
-        title = Localization("LocalisatorViewTitle")
         lblScan.text = Localization("ScanText")
+        btnStartScannen.setTitle(Localization("btnStartScannen"), for: .normal)
     }
     
     // MARK: - Notification methods

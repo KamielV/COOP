@@ -17,7 +17,7 @@ class VirtueleGidsViewController: UIViewController {
     var url: URL!
     var taal: String!
     var testURL = URL(string: "http://10.3.210.48:8080/coop/api/heyvae02/")
-    var player:AVAudioPlayer = AVAudioPlayer()
+    var player:AVPlayer = AVPlayer()
     
     @IBOutlet weak var ViewTransparantContainer: UIView!
     
@@ -63,6 +63,9 @@ class VirtueleGidsViewController: UIViewController {
         requestPage()
     }
     
+    @IBAction func sliderValuaChanged(_ sender: Any) {
+        
+    }
     
     func configureViewFromLocalisation() {
         title = Localization("LocalisatorViewTitle")
@@ -147,13 +150,13 @@ class VirtueleGidsViewController: UIViewController {
                     self.imgThemaFoto.image = UIImage(named: themafoto)
                     self.langeTeksLabel.text = beschrijving
                     self.imgAfbeelding.image = UIImage(named: afbeelding)
-                    do {
-                        let audioPath = Bundle.main.path(forResource: audiofile, ofType: "mp3")
-                        try self.player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath!))
+                    //AVPlayer https://stackoverflow.com/questions/42651163/how-to-make-uislider-match-audio-progress
+                    let player = AVPlayer(url: Bundle.main.url(forResource: audiofile, withExtension: "mp3")!)
+                    player.addPeriodicTimeObserver(forInterval: CMTimeMake(1, 30), queue: .main) { time in
+                            let fraction = CMTimeGetSeconds(time) / CMTimeGetSeconds(player.currentItem!.duration)
+                            self.sliderMp3.value = Float(fraction)
                     }
-                    catch {
-                        print("Audio load error")
-                    }
+                    print("Audio load error")
                 }
                 
                 

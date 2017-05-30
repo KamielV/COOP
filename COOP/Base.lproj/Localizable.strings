@@ -7,5 +7,18 @@
 */
 "ScanText" = "Scan something";
 "languageChangedWarningMessage" = "Language changed to English";
+"Punten" = "points";
+"LblProficiat" = "Congratulations";
+"BtnFoto" = "Take a picture";
+"BtnQr" = "Proceed with the search";
+"BtnQuiz" = "Restart";
+"LblTut1" = "Find the 14 QR codes and scan them with the iPad!";
+"LblTut2" = "Learn all about the canal district";
+"LblTut3" = "And score high on the quiz!";
+"LblTut4" = "Take a group photo";
+"Cancel" = "Cancel";
+"btnStartScannen" = "Start scanning";
+"btnTrekFoto" = "Take a picture";
+"btnVerstuur" = "Send";
 
 

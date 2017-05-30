@@ -17,6 +17,7 @@
 		19212FB91ECD8F0D00EA78EF /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19212FB81ECD8F0D00EA78EF /* InfoViewController.swift */; };
 		192469B81ECF354100348611 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192469B71ECF354100348611 /* TestViewController.swift */; };
 		192469BA1ED2D6E900348611 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192469B91ED2D6E900348611 /* QuizViewController.swift */; };
+		19AB32241EDD52E500E80B23 /* autotekoop.mp3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 19AB32231EDD52E500E80B23 /* autotekoop.mp3.mp3 */; };
 		19E72CF31ECDB1C2006A40B9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 19E72CF51ECDB1C2006A40B9 /* Localizable.strings */; };
 		19E72CFD1ECDB8B9006A40B9 /* Localisator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E72CFC1ECDB8B9006A40B9 /* Localisator.swift */; };
 		19E72D061ECF1181006A40B9 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E72D051ECF1181006A40B9 /* SwiftViewController.swift */; };
@@ -65,6 +66,7 @@
 		19212FB81ECD8F0D00EA78EF /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		192469B71ECF354100348611 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		192469B91ED2D6E900348611 /* QuizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		19AB32231EDD52E500E80B23 /* autotekoop.mp3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = autotekoop.mp3.mp3; sourceTree = "<group>"; };
 		19E72CF41ECDB1C2006A40B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		19E72CF71ECDB1D4006A40B9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		19E72CF81ECDB1D4006A40B9 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				770AAB271ED32D6B009F6479 /* StartschermViewController.swift */,
 				192469B91ED2D6E900348611 /* QuizViewController.swift */,
 				19212F911ECD848900EA78EF /* Assets.xcassets */,
+				19AB32231EDD52E500E80B23 /* autotekoop.mp3.mp3 */,
 				19212F931ECD848900EA78EF /* LaunchScreen.storyboard */,
 				19E940C61EDC4E06000FF1BF /* Info.plist */,
 				19E72CF51ECDB1C2006A40B9 /* Localizable.strings */,
@@ -295,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19212F951ECD848900EA78EF /* LaunchScreen.storyboard in Resources */,
+				19AB32241EDD52E500E80B23 /* autotekoop.mp3.mp3 in Resources */,
 				19E72CF31ECDB1C2006A40B9 /* Localizable.strings in Resources */,
 				19212F921ECD848900EA78EF /* Assets.xcassets in Resources */,
 				19E940C41EDC4E06000FF1BF /* Info.plist in Resources */,

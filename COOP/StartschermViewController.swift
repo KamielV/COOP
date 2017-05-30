@@ -60,6 +60,9 @@ class StartschermViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in
                 self.gaNaarTutorial()
             })
+            alert.addAction(UIAlertAction(title: Localization("Cancel"), style: .cancel) { action in
+                print("Cancel")
+            })
             self.present(alert, animated: true)
         }
     }
@@ -92,6 +95,9 @@ class StartschermViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in
                 self.gaNaarTutorial()
             })
+            alert.addAction(UIAlertAction(title: Localization("Cancel"), style: .cancel) { action in
+                print("Cancel")
+            })
             self.present(alert, animated: true)
         }
     }
@@ -121,6 +127,9 @@ class StartschermViewController: UIViewController {
             let alert = UIAlertController(title: Localization("languageChangedWarningMessage"), message: "", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in
                 self.gaNaarTutorial()
+            })
+            alert.addAction(UIAlertAction(title: Localization("Cancel"), style: .cancel) { action in
+                print("Cancel")
             })
             self.present(alert, animated: true)
         }

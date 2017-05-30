@@ -13,6 +13,8 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 
     var imagePicker:UIImagePickerController? = UIImagePickerController()
     @IBOutlet weak var imgFoto: UIImageView!
+    @IBOutlet weak var btnTrekFoto: UIButton!
+    @IBOutlet weak var btnVerstuur: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker?.delegate = self
@@ -27,12 +29,31 @@ class FotoViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             alert.addAction(ok)
             present(alert, animated: true, completion: nil)
         }
+        NotificationCenter.default.addObserver(self, selector: #selector(InfoViewController.receiveLanguageChangedNotification(notification:)), name: kNotificationLanguageChanged, object: nil)
+        configureViewFromLocalisation()
         // Do any additional setup after loading the view.
+        btnTrekFoto.layer.cornerRadius = 20
+        btnTrekFoto.layer.shadowColor = UIColor.white.cgColor
+        btnTrekFoto.layer.shadowOpacity = 6
+        btnTrekFoto.layer.shadowOffset = CGSize.zero
+        btnTrekFoto.layer.shadowRadius = 25
+        
+        btnVerstuur.layer.cornerRadius = 20
+        btnVerstuur.layer.shadowColor = UIColor.white.cgColor
+        btnVerstuur.layer.shadowOpacity = 6
+        btnVerstuur.layer.shadowOffset = CGSize.zero
+        btnVerstuur.layer.shadowRadius = 25
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func configureViewFromLocalisation() {
+        title = Localization("LocalisatorViewTitle")
+        btnTrekFoto.setTitle(Localization("btnTrekFoto"), for: .normal)
+        btnVerstuur.setTitle(Localization("btnVerstuur"), for: .normal)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

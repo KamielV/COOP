@@ -16,5 +16,7 @@
 "LblTut2" = "Pour tout savoir sur le quartier du canal";
 "LblTut3" = "Faites un maximum de points";
 "LblTut4" = "Prenez une photo de groupe";
-
-
+"Cancel" = "Annuler";
+"btnStartScannen" = "Commencer à scanner";
+"btnTrekFoto" = "Prends une photo";
+"btnVerstuur" = "Envoyer";
