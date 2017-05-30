@@ -11,11 +11,11 @@ import AVFoundation
 
 class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
+    var url:URL!
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
     
-    @IBOutlet weak var messageLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -63,7 +63,6 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             captureSession?.startRunning()
             
             // Move the message label and top bar to the front
-            view.bringSubview(toFront: messageLabel)
             
             // Initialize QR Code Frame to highlight the QR code
             qrCodeFrameView = UIView()
@@ -87,7 +86,6 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects == nil || metadataObjects.count == 0 {
             qrCodeFrameView?.frame = CGRect.zero
-            messageLabel.text = "No QR code is detected"
             return
         }
         
@@ -100,37 +98,25 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
-                let data = metadataObj.stringValue.data(using: .utf8)
-                convertJSON(data: data!)
+                self.url = URL(string: metadataObj.stringValue)
+                let alert = UIAlertController(title: "QR scanned", message: "chique", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in
+                    self.gaNaarThemaView()
+                })
+                self.present(alert, animated: true)
             }
         }
     }
     
-    //JSON parsers
-    
-    func convertJSON(data: Data) {
-        do {
-            guard let json = try JSONSerialization.jsonObject(with:data, options: []) as? [String: AnyObject]
-                else {
-                    print("Json Error")
-                    return
-            }
-            let name = json["name"] as? String
-            messageLabel.text = name
-            performSegue(withIdentifier: name!, sender: self)
-        }
-        catch {
-            print("Big error")
-            return
-        }
+    func gaNaarThemaView()  {
+        performSegue(withIdentifier: "toDetail", sender: self)
     }
-    
     // segues
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "Kamiel")  {
-            let nextVC = segue.destination as? TestViewController
-            nextVC?.name = "Kamiel"
+        if(segue.identifier == "toDetail")  {
+            let nextVC = segue.destination as? VirtueleGidsViewController
+            nextVC?.url = self.url
         }
     }
 }

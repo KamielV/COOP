@@ -7,3 +7,14 @@
 */
 "ScanText" = "Scanner quelque chose";
 "languageChangedWarningMessage" = "Langue changée en français";
+"Punten" = "Points";
+"LblProficiat" = "Félicitations";
+"BtnFoto" = "Prenez une photo";
+"BtnQr" = "Continuez la quête";
+"BtnQuiz" = "Recommencer";
+"LblTut1" = "Trouvez les 14 codes QR et scannez les avec l'iPad!";
+"LblTut2" = "Pour tout savoir sur le quartier du canal";
+"LblTut3" = "Faites un maximum de points";
+"LblTut4" = "Prenez une photo de groupe";
+
+

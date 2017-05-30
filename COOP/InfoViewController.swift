@@ -10,12 +10,18 @@ import UIKit
 
 class InfoViewController: UIViewController {
     
+    var coreData: [CoreData] = []
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     let arrayLanguages = Localisator.sharedInstance.getArrayAvailableLanguages()
 
     @IBOutlet weak var lblScan: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        do {
+            coreData = try context.fetch(CoreData.fetchRequest())
+        } catch {
+            print("Fetching Failed")
+        }
         // kopieren in de view did load
         NotificationCenter.default.addObserver(self, selector: #selector(InfoViewController.receiveLanguageChangedNotification(notification:)), name: kNotificationLanguageChanged, object: nil)
         configureViewFromLocalisation()
@@ -36,29 +42,6 @@ class InfoViewController: UIViewController {
     func receiveLanguageChangedNotification(notification:NSNotification) {
         if notification.name == kNotificationLanguageChanged {
             configureViewFromLocalisation()
-        }
-    }
-    @IBAction func btnNLTouched(_ sender: Any) {
-        if SetLanguage("Dutch_nl") {
-            let alert = UIAlertController(title: Localization("languageChangedWarningMessage"), message: "", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in })
-            self.present(alert, animated: true)
-        }
-    }
-    
-
-    @IBAction func btnFRTouched(_ sender: Any) {
-        if SetLanguage("French_fr") {
-            let alert = UIAlertController(title: Localization("languageChangedWarningMessage"), message: "", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in })
-            self.present(alert, animated: true)
-        }
-    }
-    @IBAction func btnENTouched(_ sender: Any) {
-        if SetLanguage("English_en") {
-            let alert = UIAlertController(title: Localization("languageChangedWarningMessage"), message: "", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default) { action in })
-            self.present(alert, animated: true)
         }
     }
     /*

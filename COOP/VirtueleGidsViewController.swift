@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import AVFoundation
 
 class VirtueleGidsViewController: UIViewController {
     
+    var playing = false
+    var coreData: [CoreData] = []
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var url: URL!
+    var taal: String!
+    var testURL = URL(string: "http://10.3.210.48:8080/coop/api/heyvae02/")
+    var player:AVAudioPlayer = AVAudioPlayer()
     
     @IBOutlet weak var ViewTransparantContainer: UIView!
     
+    @IBOutlet weak var imgThemaFoto: UIImageView!
+    @IBOutlet weak var imgAfbeelding: UIImageView!
     
     @IBOutlet weak var titelLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
@@ -23,6 +33,14 @@ class VirtueleGidsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        do {
+            coreData = try context.fetch(CoreData.fetchRequest())
+            taal = coreData[0].taal
+        } catch {
+            print("Fetching Failed")
+        }
+        NotificationCenter.default.addObserver(self, selector: #selector(InfoViewController.receiveLanguageChangedNotification(notification:)), name: kNotificationLanguageChanged, object: nil)
+        configureViewFromLocalisation()
         
        ViewTransparantContainer.layer.cornerRadius = 11
         ViewTransparantContainer.layer.shadowColor = UIColor.black.cgColor
@@ -39,6 +57,129 @@ class VirtueleGidsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getData()
+        requestPage()
+    }
+    
+    
+    func configureViewFromLocalisation() {
+        title = Localization("LocalisatorViewTitle")
+        titelLabel.text = Localization("TitelTekstgids")
+    }
+    
+    func getData() {
+        do {
+            coreData = try context.fetch(CoreData.fetchRequest())
+            taal = coreData[0].taal
+        } catch {
+            print("Fetching Failed")
+        }
+    }
+    func requestPage() {
+        var urlRequest: URLRequest!
+        if (url != nil) {
+            let tempCoreData = CoreData(context: self.context)
+            tempCoreData.url = "\(url.absoluteString)\\\(taal)"
+            self.url = URL(string: tempCoreData.url!)
+            self.context.insert(tempCoreData)
+            do {
+                try self.context.save()
+            }
+            catch {
+                print("error met core data")
+            }
+            urlRequest = URLRequest(url: url!)
+        }
+        else {
+            let tempCoreData = coreData[0]
+            self.url = URL(string: "\(tempCoreData.url!)\\\(taal)")
+            urlRequest = URLRequest(url: url)
+        }
+        
+        let session = URLSession(configuration:URLSessionConfiguration.default)
+        let task = session.dataTask(with: urlRequest) { (data, response, error) in
+            // check for errors
+            guard error == nil else {
+                print("error calling GET")
+                print(error!)
+                return
+            }
+            
+            guard let responseData = data else {
+                print("Error: did not receive data")
+                return
+            }
+            do {
+                guard let json = try JSONSerialization.jsonObject(with:responseData, options: []) as? [String: AnyObject]
+                    else {
+                        print("Todo Error")
+                        return
+                }
+                guard let titel = (json["titel"]) as? String else {
+                    print ("titel error")
+                    return
+                }
+                guard let subtitel = (json["subtitel"]) as? String else {
+                    print ("subtitel error")
+                    return
+                }
+                guard let themafoto = (json["themafoto"]) as? String else {
+                    print ("themafoto error")
+                    return
+                }
+                guard let beschrijving = (json["beschrijving"]) as? String else {
+                    print ("beschrijving error")
+                    return
+                }
+                guard let audiofile = (json["audiofile"]) as? String else {
+                    print ("audiofile error")
+                    return
+                }
+                guard let afbeelding = (json["afbeelding"]) as? String else {
+                    print ("afbeelding error")
+                    return
+                }
+                DispatchQueue.main.async {
+                    self.titelLabel.text = titel
+                    self.subtitleLabel.text = subtitel
+                    self.imgThemaFoto.image = UIImage(named: themafoto)
+                    self.langeTeksLabel.text = beschrijving
+                    self.imgAfbeelding.image = UIImage(named: afbeelding)
+                    do {
+                        let audioPath = Bundle.main.path(forResource: audiofile, ofType: "mp3")
+                        try self.player = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath!))
+                    }
+                    catch {
+                        print("Audio load error")
+                    }
+                }
+                
+                
+            } catch {
+                print("Big error")
+                return
+            }
+            
+        }
+        task.resume()
+        
+    }
+    @IBAction func btnPlayTouched(_ sender: Any) {
+        if(!playing)
+        {
+            player.play()
+            playing = true
+            BtnPLay.setImage(#imageLiteral(resourceName: "pauseButton") , for: .normal)
+        }
+        else {
+            player.pause()
+            playing = false
+            BtnPLay.setImage(#imageLiteral(resourceName: "playButton") , for: .normal)
+        }
+        
+    }
 
     /*
     // MARK: - Navigation

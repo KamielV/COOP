@@ -10,13 +10,19 @@ import UIKit
 
 class ScoreViewController: UIViewController {
 
+    var score:Int!
+    
     @IBOutlet weak var BtnFoto: UIButton!
     @IBOutlet weak var BtnQr: UIButton!
     @IBOutlet weak var BtnQuiz: UIButton!
+    @IBOutlet weak var LblProficiat: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(InfoViewController.receiveLanguageChangedNotification(notification:)), name: kNotificationLanguageChanged, object: nil)
+        configureViewFromLocalisation()
         
         BtnFoto.layer.cornerRadius = 20
         BtnFoto.layer.shadowColor = UIColor.white.cgColor
@@ -44,6 +50,14 @@ class ScoreViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func configureViewFromLocalisation() {
+        title = Localization("LocalisatorViewTitle")
+        LblProficiat.text = Localization("LblProficiat")
+        BtnFoto.setTitle(Localization("BtnFoto"), for: .normal)
+         BtnQr.setTitle(Localization("BtnQr"), for: .normal)
+         BtnQuiz.setTitle(Localization("BtnFoto"), for: .normal)
     }
     
 
