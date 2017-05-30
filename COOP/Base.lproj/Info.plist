@@ -6,8 +6,8 @@
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>http://10.3.210.48:8080</key>
-			<string>http://10.3.210.48:8080</string>
+			<key>http://10.3.210.28:8080</key>
+			<string>http://10.3.210.28:8080</string>
 		</dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
